@@ -1,12 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Jordans Portfolio</title>
+  </head>
+  <body>
+    <section class="showcase">
+      <header>
+        <h2 class="header-text">Jordan Fontaine</h2>
+        <div class="toggle"></div>
+      </header>
+
+      <video src="media/landingPage.mp4" muted loop autoplay></video>
+      <div class="overlay"></div>
+
+      <div class="body-text">
+        <h2>Full Stack</h2>
+        <h3>Software Engineer</h3>
+        <p>
+          This website serves as a portfolio with examples of my skillset and
+          projects. Inside you'll find, front-end, back-end and full-stack
+          examples built with a variety of languages and frameworks such as
+          JavaScript, Python, GraphQL, React and many more. Take a look around
+          and please don't hesitate to contact me with any questions and
+          inquries.
+        </p>
+        <a id="explore" href="#">Explore</a>
+      </div>
+
+      <ul class="social">
+        <li>
+          <a href="#"
+            ><img src="https://i.ibb.co/x7P24fL/facebook.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="https://i.ibb.co/Wnxq2Nq/twitter.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="#"
+            ><img src="https://i.ibb.co/ySwtH4B/instagram.png" alt=""
+          /></a>
+        </li>
+      </ul>
+    </section>
+
+    <div class="menu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="https://chatbot-gamma-nine.vercel.app/">ChatBot</a></li>
+        <li><a href="#">React</a></li>
+        <li><a href="#">Python</a></li>
+        <li><a href="#">Backend</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <script>
+      const showcase = document.querySelector(".showcase");
+      const toggle = document.querySelector(".toggle");
+      const explore = document.getElementById("explore");
+
+      // LISTENER
+      toggle.addEventListener("click", () => {
+        const active = showcase.classList.contains("active");
+        if (active) {
+          showcase.classList.remove("active");
+          toggle.classList.remove("active");
+        } else {
+          showcase.classList.add("active");
+          toggle.classList.add("active");
+        }
+      });
+
+      explore.addEventListener("click", () => {
+        const active = showcase.classList.contains("active");
+        if (!active) {
+          showcase.classList.add("active");
+          toggle.classList.add("active");
+        }
+      });
+    </script>
+  </body>
 </html>
